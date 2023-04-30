@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Peta</title>
+	<style>
+		#map {
+			height: 400px;
+			width: 100%;
+		}
+	</style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
+	<script>
+        function initMap() {
+            // koordinat awal
+            var myLatLng = {lat: -6.1754, lng: 106.8272};
+    
+            // membuat objek peta
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: myLatLng
+            });
+    
+             // menambahkan marker
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Lokasi saya'
+            });
+        }
+    
+        // memanggil fungsi initMap()
+        initMap();
+    </script> 
+</head>
+<body>
+	<div id="map"></div>
+</body>
+</html>
+
